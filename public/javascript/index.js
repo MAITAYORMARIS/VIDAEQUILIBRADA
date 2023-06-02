@@ -60,6 +60,7 @@ function navegacion(id) {
             document.getElementById("mapau").style.display="none"
             document.getElementById("detalleProducto").style.display="none"
             document.getElementById("seccionCompras").style.display="none"
+            document.getElementById("contacto").style.display="none"
             break;
         case "productosSinLactosa":
             imprimir(productosSinLactosa)
@@ -69,6 +70,7 @@ function navegacion(id) {
             document.getElementById("mapau").style.display="none"
             document.getElementById("detalleProducto").style.display="none"
             document.getElementById("seccionCompras").style.display="none"
+            document.getElementById("contacto").style.display="none"
             break;
         case "suplementosNaturales":
             imprimir(suplementosNaturales)
@@ -78,6 +80,7 @@ function navegacion(id) {
             document.getElementById("tituloSec").innerHTML="SUPLEMENTOS NATURALES"
             document.getElementById("detalleProducto").style.display="none"
             document.getElementById("seccionCompras").style.display="none"
+            document.getElementById("contacto").style.display="none"
             break;
         case "hogar":
             imprimir(hogar)
@@ -87,13 +90,16 @@ function navegacion(id) {
             document.getElementById("mapau").style.display="none"
             document.getElementById("detalleProducto").style.display="none"
             document.getElementById("seccionCompras").style.display="none"
+            document.getElementById("contacto").style.display="none"
             break;
         case "contact":
             console.log("form de contactos")
+            formulario() 
             document.getElementById("carouselExampleFade").style.display="none"
             document.getElementById("mapau").style.display="none"
             document.getElementById("detalleProducto").style.display="none"
             document.getElementById("seccionCompras").style.display="none"
+            document.getElementById("contacto").style.display="flex"
             break;
         default:
             document.getElementById("carouselExampleFade").style.display = "flex"
@@ -101,6 +107,7 @@ function navegacion(id) {
             document.getElementById("seccionProductos").style.display = "none"
             document.getElementById("detalleProducto").style.display="none"
             document.getElementById("seccionCompras").style.display="none"
+            document.getElementById("contacto").style.display="none"
     }
 }
 
