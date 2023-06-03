@@ -4,6 +4,7 @@ let dataProductos = []
 let suplementosNaturales = []
 let hogar = []
 let alimentosOrganicos = []
+let productosSinLactosa=[]
 
 async function getDB() {
     await coleccionProductos.get()
@@ -45,7 +46,6 @@ for (var i = 0; i < botones.length; i++) {
 
     elementos.addEventListener("click", function (e) {
         navegacion(e.target.id);
-        // console.log(e.target.id)
 
     })
 }

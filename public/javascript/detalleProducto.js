@@ -11,8 +11,10 @@ function imprimirDetalle(id) {
     }
 
     var contenidoDetalle = ""
-    // var ingesta = detalleProducto[i].ingesta;
-    // var ingestaVisible = ingesta !== "" ? "" : "hidden";
+    var ingesta = detalleProducto[0].ingesta;
+    console.log(ingesta)
+    
+    var ingestaVisible = ingesta !== "" ? "" : "hidden";
     contenidoDetalle =
         `
         <p class="titulo">${detalleProducto[0].categoria}</p>
@@ -41,10 +43,10 @@ function imprimirDetalle(id) {
           <p style="font-weight: bold">Mas detalles de este producto</p>
           <div class="masDetalles">
             <p>Marca: ${(detalleProducto[0].marca).toLowerCase()}</p>
-            <p class="">Dosis: ${detalleProducto[0].ingesta}</p>
+            <p class="${ingestaVisible}">Dosis: ${detalleProducto[0].ingesta}</p>
             <p>Info: ${detalleProducto[0].descripcion}</p>
           </div>
-          <a href="#" class="btn btnShop"><i class="fa-solid fa-cart-shopping">Comprar</i></a>
+          <a href="#" class="btn btnShop"><i class="fa-solid fa-cart-shopping">Ir a Comprar</i></a>
         </div>
       </div>
 
@@ -58,9 +60,14 @@ function imprimirDetalle(id) {
     
     
     var botonCompra = document.getElementsByClassName("btnShop")
-    botonCompra.addEventListener("click", function (e) {
+    console.log(botonCompra)
+    for (var u=0; u<botonCompra.length; u++){
+      const boton=botonCompra[u]
+      boton.addEventListener("click", function (e) {
         compras()
 
     })
+    }
+    
 }
 
