@@ -49,7 +49,13 @@ for (var i = 0; i < botones.length; i++) {
 
     })
 }
-
+document.getElementById("enlaceContacto").addEventListener("click", function(e){
+    navegacion("contact")
+    console.log("llame a contacto desde footer")
+})
+document.getElementById("enlaceCompras").addEventListener("click", function(e){
+    compras()
+})
 function navegacion(id) {
     switch (id) {
         case "alimentosOrganicos":
@@ -122,7 +128,7 @@ function imprimir(array) {
         <div class="card-body bodyProducto">
           <p class="card-title tituloProducto">${array[i].nombre}</p>
           <p class="card-text">Presentacion: ${array[i].presentacion}</p>
-          <p class="card-text">Precio:${array[i].precio} </p>
+          <p class="card-text">Precio:$${array[i].precio} </p>
         </div>
         <div class="card-body footProducto">
         <button id=${array[i].id} class="btn btnInfo"><i class="fa-solid fa-plus">Mas info</i></button>

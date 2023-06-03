@@ -8,7 +8,10 @@ let totalItem = 0
 function compras() {
   document.getElementById("seccionProductos").style.display = "none"
   document.getElementById("detalleProducto").style.display = "none"
+  document.getElementById("carouselExampleFade").style.display="none"
+            document.getElementById("mapau").style.display="none"
   document.getElementById("seccionCompras").style.display = "flex"
+  document.getElementById("contacto").style.display="none"
   displaycompras(dataProductos)
 }
 
@@ -174,7 +177,7 @@ function ocultarCarrito() {
     carrito.style.display = "none"
 
     var items = document.getElementById("compras")
-    items.style.margin = "0% 17%"
+    items.style.width = "100%"
 
   }
 }
