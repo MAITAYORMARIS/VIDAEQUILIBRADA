@@ -19,17 +19,12 @@
     align-items: center;
 }
 
-.tituloSeccion {
-    font-size: 1.5em;
-    font-weight: bolder;
-    text-transform: uppercase;
-    text-align: center;
-    color: #00bf63;
-}
+
+
 
 .cardProducto {
     width: 280px;
-    height: 360px;
+    height: 380px;
     margin: 10px;
     cursor: pointer;
     padding-left: 0;
@@ -69,7 +64,7 @@ transform:scale(1.15);
     height: 32%;
     width: 100%;
     --bs-card-spacer-y: 0.5rem;
-    --bs-card-spacer-x: 1rem;
+    --bs-card-spacer-x: 0.5rem;
     --bs-card-title-spacer-y: 0;
 }
 

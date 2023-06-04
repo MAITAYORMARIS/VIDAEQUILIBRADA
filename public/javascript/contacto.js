@@ -38,6 +38,7 @@ function formulario() {
   </form>
   `;
   
+  
     var seccionContacto = document.getElementById("contacto");
     seccionContacto.style.display = "flex"
     seccionContacto.innerHTML = formulary;

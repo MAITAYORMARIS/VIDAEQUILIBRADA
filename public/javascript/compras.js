@@ -12,6 +12,10 @@ function compras() {
             document.getElementById("mapau").style.display="none"
   document.getElementById("seccionCompras").style.display = "flex"
   document.getElementById("contacto").style.display="none"
+  document.getElementById("tituloSec").innerHTML="hace tu pedido"
+  document.getElementById("textoSeccion").style.display="none"
+  document.getElementById("elementoBusqueda").style.display="none"
+  document.getElementsByClassName("circulo")[0].innerHTML=`<i class="fa-solid fa-basket-shopping" style="color: #f0f2f4;"></i>`
   displaycompras(dataProductos)
 }
 
@@ -177,8 +181,8 @@ function ocultarCarrito() {
     carrito.style.display = "none"
 
     var items = document.getElementById("compras")
-    items.style.width = "100%"
-
+    items.style.width = "70%"
+    items.style.padding="0 20px"
   }
 }
 
