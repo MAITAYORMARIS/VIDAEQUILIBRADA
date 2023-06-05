@@ -77,10 +77,58 @@ main {
 	width: 100%; 
 	margin-bottom: 20PX;
   }
+
+  #fondoLogos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(236, 231, 184);
+    position: relative;
+    width: 100%;
+    height: 110px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.espacioLogos {
+    margin: 3px 45px 0 5px;
+    padding: 0 0 0 0;
+}
+
+#cardsInicio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+   
+  }
+  
+#cardsInicio .card {
+    width: 18rem;
+    margin: 10px;
+    cursor: pointer;
+    
+  }
+  #cardsInicio .card .card-body .card-text{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2em;
+  }
+
+
+  #cardsInicio .card-body{
+   text-align: center;
+   background-color: rgb(236, 231, 184);
+   color: white;
+}
+
+#cardsInicio .card-img-top{
+    height: 280px;
+ }
+
 .headerSeccion{
     width: 100%;
     height: 150px;
-    display: flex;
+    display: none;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
@@ -219,6 +267,12 @@ footer {
     border-radius: 5px;
     background-color: #0097b2;
 }
+@media(min-width:616px) {
+
+    .particularInicioHogar{
+        padding-top: 16px;
+    }
+}
 @media(max-width:991px) {
 
     #alineado {
@@ -226,7 +280,13 @@ footer {
         flex-direction: column;
         align-items: end;
     }
+    .espacioLogos {
+        display: none;
+    }
 
+    .imgLogos {
+        margin: 0 15px 0 0;
+    }
 	#carouselExampleFade {
 		width: 100%; 
 	  }

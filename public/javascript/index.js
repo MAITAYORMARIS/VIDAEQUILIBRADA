@@ -58,6 +58,30 @@ document.getElementById("enlaceContacto").addEventListener("click", function(e){
 document.getElementById("enlaceCompras").addEventListener("click", function(e){
     compras()
 })
+
+var tarjetaOrganicos=document.getElementById("cardOrganicos")
+tarjetaOrganicos.addEventListener("click", function(e){
+    navegacion("alimentosOrganicos")
+}
+)
+
+var tarjetaSinLactosa=document.getElementById("cardSinLactosa")
+tarjetaSinLactosa.addEventListener("click", function(e){
+    navegacion("productosSinLactosa")
+}
+)
+var tarjetaSuplementos=document.getElementById("cardSuplementos")
+tarjetaSuplementos.addEventListener("click", function(e){
+    navegacion("suplementosNaturales")
+}
+)
+var tarjetaHogar=document.getElementById("cardHogar")
+tarjetaHogar.addEventListener("click", function(e){
+    navegacion("hogar")
+}
+)
+
+
 function navegacion(id) {
     switch (id) {
         case "alimentosOrganicos":
@@ -67,6 +91,8 @@ function navegacion(id) {
             document.getElementById("textoSeccion").style.display="flex"
             document.getElementById("tituloSec").innerHTML="ALIMENTOS ORGANICOS"
             document.getElementById("seccionProductos").style.display = "flex"
+            document.getElementById("fondoLogos").style.display="none"
+            document.getElementById("cardsInicio").style.display="none"
             document.getElementById("carouselExampleFade").style.display="none"
             document.getElementById("mapau").style.display="none"
             document.getElementById("detalleProducto").style.display="none"
@@ -84,6 +110,8 @@ function navegacion(id) {
             document.getElementsByClassName("circulo")[0].innerHTML=`<div class="contenedorImgCategoria"><img src="./images/sinLactosa.jpg" alt="imagen productos sin Lactosa"></div>`
             document.getElementById("seccionProductos").style.display = "flex"
             document.getElementById("carouselExampleFade").style.display="none"
+            document.getElementById("fondoLogos").style.display="none"
+            document.getElementById("cardsInicio").style.display="none"
             document.getElementById("mapau").style.display="none"
             document.getElementById("detalleProducto").style.display="none"
             document.getElementById("seccionCompras").style.display="none"
@@ -96,6 +124,8 @@ function navegacion(id) {
             document.getElementById("seccionProductos").style.display = "flex"
             document.getElementById("carouselExampleFade").style.display="none"
             document.getElementById("mapau").style.display="none"
+            document.getElementById("fondoLogos").style.display="none"
+            document.getElementById("cardsInicio").style.display="none"
             document.getElementsByClassName("headerSeccion")[0].style.display="flex"
             document.getElementById("textoSeccion").style.display="flex"
             document.getElementById("tituloSec").innerHTML="SUPLEMENTOS NATURALES"
@@ -113,6 +143,8 @@ function navegacion(id) {
             document.getElementById("textoSeccion").style.display="flex"
             document.getElementById("seccionProductos").style.display = "flex"
             document.getElementsByClassName("headerSeccion")[0].style.display="flex"
+            document.getElementById("fondoLogos").style.display="none"
+            document.getElementById("cardsInicio").style.display="none"
             document.getElementById("carouselExampleFade").style.display="none"
             document.getElementById("mapau").style.display="none"
             document.getElementById("detalleProducto").style.display="none"
@@ -125,6 +157,8 @@ function navegacion(id) {
             formulario() 
             document.getElementById("carouselExampleFade").style.display="none"
             document.getElementById("mapau").style.display="none"
+            document.getElementById("fondoLogos").style.display="none"
+            document.getElementById("cardsInicio").style.display="none"
             document.getElementById("detalleProducto").style.display="none"
             document.getElementById("seccionCompras").style.display="none"
             document.getElementById("contacto").style.display="flex"
@@ -141,8 +175,9 @@ function navegacion(id) {
             document.getElementById("detalleProducto").style.display="none"
             document.getElementById("seccionCompras").style.display="none"
             document.getElementById("contacto").style.display="none"
-            document.getElementsByClassName("headerSeccion")[0].style.display="none"
-           
+            document.getElementsByClassName("headerSeccion").style.display="none"
+            document.getElementById("fondoLogos").style.display="flex"
+            document.getElementById("cardsInicio").style.display="flex"
     }
 }
 

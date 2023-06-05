@@ -6,16 +6,19 @@ let cantidad = 0
 let totalItem = 0
 
 function compras() {
+  document.getElementById("fondoLogos").style.display = "none"
+  document.getElementById("cardsInicio").style.display = "none"
   document.getElementById("seccionProductos").style.display = "none"
   document.getElementById("detalleProducto").style.display = "none"
-  document.getElementById("carouselExampleFade").style.display="none"
-            document.getElementById("mapau").style.display="none"
+  document.getElementById("carouselExampleFade").style.display = "none"
+  document.getElementById("mapau").style.display = "none"
   document.getElementById("seccionCompras").style.display = "flex"
-  document.getElementById("contacto").style.display="none"
-  document.getElementById("tituloSec").innerHTML="hace tu pedido"
-  document.getElementById("textoSeccion").style.display="none"
-  document.getElementById("elementoBusqueda").style.display="none"
-  document.getElementsByClassName("circulo")[0].innerHTML=`<i class="fa-solid fa-basket-shopping" style="color: #f0f2f4;"></i>`
+  document.getElementById("contacto").style.display = "none"
+  document.getElementsByClassName("headerSeccion")[0].style.display="flex"
+  document.getElementById("tituloSec").innerHTML = "hace tu pedido"
+  document.getElementById("textoSeccion").style.display = "none"
+  document.getElementById("elementoBusqueda").style.display = "none"
+  document.getElementsByClassName("circulo")[0].innerHTML = `<i class="fa-solid fa-basket-shopping" style="color: #f0f2f4;"></i>`
   displaycompras(dataProductos)
 }
 
@@ -98,7 +101,7 @@ function displayCarrito(carrito) {
                   <div class="selector-cantidad">
                   <span class="carrito-item-precio">Precio: $${carrito[b].precio}</span>
                   <label for="cantidad" class="form-label" style="display:none;">Cantidad</label>
-                  <input type="number" class="form-control introCar" id="cantidad${carrito[b].id}" placeholder="Cantidad" value="${carrito[b].cantidad}">
+                  <input type="number" min="0" class="form-control introCar" id="cantidad${carrito[b].id}" placeholder="Cantidad" value="${carrito[b].cantidad}">
                   <i class="fa-solid fa-trash"></i>
                 </div>
                 <p id="totalItem${carrito[b].id}">Total:$${(carrito[b].precio) * (carrito[b].cantidad)}</p>
@@ -169,7 +172,7 @@ function eliminarItemCarrito(e) {
   carrito = carrito.filter((item) => item.id !== itemId);
 
   calculadoraTotal();
-    ocultarCarrito();
+  ocultarCarrito();
 
 }
 
@@ -182,7 +185,7 @@ function ocultarCarrito() {
 
     var items = document.getElementById("compras")
     items.style.width = "70%"
-    items.style.padding="0 20px"
+    items.style.padding = "0 20px"
   }
 }
 
