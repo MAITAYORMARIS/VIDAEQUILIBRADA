@@ -109,7 +109,6 @@
     justify-content: center;
     align-items: center;
     border: 1px solid rgba(0, 0, 0, 0.175);
-    ;
     border-radius: 5px;
     margin-top: 35px;
     overflow: hidden;
@@ -125,6 +124,7 @@
     width: 100%;
     padding: 16px 0;
     text-align: center;
+    display: flex;
 }
 
 .carrito-items {
@@ -201,7 +201,15 @@
     padding: 8px 0;
     text-align: center;
 }
-
+.btncarrito{
+    display: flex;
+    position: absolute;
+    bottom: 4px;
+    right: 0;
+    height: 20px;
+    width: 15%;
+    background-color: blue;
+}
 .oculto {
     display: none !important;
 }

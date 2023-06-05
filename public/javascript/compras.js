@@ -211,3 +211,86 @@ function calculadoraTotal() {
 
   document.getElementById("final").innerHTML = `<p>Tu total:$ ${totalGeneral}</p>`
 }
+
+var pedir=document.getElementById("pedir")
+pedir.addEventListener("click",function(e){
+ formularioCompras()
+})
+
+function formularioCompras(){
+  Swal
+  .fire({
+    html: `
+    <input class="email form-control" id="mail" type="text" name="mail" placeholder="ingrese su mail" required>
+            
+  `,
+  title: "Registro de Pedido",
+  icon: "info",
+  iconColor: "white",
+  confirmButtonText: "Enviar",
+  width: "60%",
+  grow: "",
+  background: "#2ecc71",
+  backdrop: true,
+  toast: false,
+  allowOutsideClick: true,
+  allowEnterKey: false,
+  allowEscapeKey: false,
+  stopKeydownPropagation: true,
+  confirmButtonAriaLabel: "Enviar",
+  confirmButtonColor: "white",
+  showCloseButton: true,
+  closeButtonAriaLabel: "Cerrar alerta",
+  customClass: {
+    title: "tituloAlert",
+    textconfirmButton: "custom-button",
+    confirmButton: "btnColor",
+    htmlContainer: "custom-container",
+  },
+})
+.then(resultado => {
+  enviarPedido();
+  } )
+}
+
+function enviarPedido(){
+  Swal.fire({
+    html: `
+         <p class="parrafoAlert">Gracias por tu compra. Recibiras en tu mail los link de Pago</p>
+            
+  `,
+    title: "Pedido Registrado",
+    icon: "success",
+    iconColor: "white",
+    confirmButtonText: "Confirmar",
+    width: "60%",
+    grow: "",
+    background: "#2ecc71",
+    backdrop: true,
+    toast: false,
+    allowOutsideClick: true,
+    allowEnterKey: false,
+    allowEscapeKey: false,
+    stopKeydownPropagation: true,
+    confirmButtonAriaLabel: "Confirmar",
+    confirmButtonColor: "white",
+    showCloseButton: true,
+    closeButtonAriaLabel: "Cerrar alerta",
+    customClass: {
+      title: "tituloAlert",
+      textconfirmButton: "custom-button",
+      confirmButton: "btnColor",
+      htmlContainer: "custom-container",
+    },
+  })
+  .then(resultado => {
+    limpiarCarrito();
+    } );
+}
+
+function limpiarCarrito(){
+    carrito.splice(0, carrito.length);
+    displayCarrito(carrito);
+    ocultarCarrito();
+    calculadoraTotal();
+  }

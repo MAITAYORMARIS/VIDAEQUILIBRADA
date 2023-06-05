@@ -175,7 +175,7 @@ function navegacion(id) {
             document.getElementById("detalleProducto").style.display="none"
             document.getElementById("seccionCompras").style.display="none"
             document.getElementById("contacto").style.display="none"
-            document.getElementsByClassName("headerSeccion").style.display="none"
+            document.getElementsByClassName("headerSeccion")[0].style.display="none"
             document.getElementById("fondoLogos").style.display="flex"
             document.getElementById("cardsInicio").style.display="flex"
     }
