@@ -1,4 +1,25 @@
-function nosotros() {
+function nosotros(){
+  document.getElementById("actividades").style.display = "none"
+  document.getElementById("carouselExampleFade").style.display = "none"
+  document.getElementById("seccionProductos").style.display = "none"
+  document.getElementById("contacto").style.display = "none"
+  document.getElementById("fondoLogos").style.display = "none"
+  document.getElementById("cardsInicio").style.display = "none"
+  document.getElementById("detalleProducto").style.display = "none"
+  document.getElementById("seccionCompras").style.display = "none"
+  document.getElementById("mapau").style.display = "none"
+  document.getElementsByClassName("headerSeccion")[0].style.display="flex"
+  document.getElementById("tituloSec").innerHTML = "conocenos"
+  document.getElementById("textoSeccion").style.display = "none"
+  document.getElementById("elementoBusqueda").style.display = "none"
+  document.getElementsByClassName("circulo")[0].innerHTML = `<i class="fa-solid fa-circle-info" style="color: #f4f7fa;"></i>`
+  var sectionNosotros = document.getElementById("sobreNosotros")
+  sectionNosotros.style.display = "flex"
+  displaynosotros()
+}
+
+
+function displaynosotros() {
 
   var nosotrosSection;
   nosotrosSection = `
@@ -31,19 +52,10 @@ function nosotros() {
   </div>
     `
 
-  var sectionNosotros = document.getElementById("sobreNosotros");
-  sectionNosotros.style.display = "flex";
+  var sectionNosotros = document.getElementById("sobreNosotros")
+  sectionNosotros.style.display = "flex"
   sectionNosotros.innerHTML = nosotrosSection;
-  document.getElementById("actividades").style.display = "none"
-  document.getElementById("carouselExampleFade").style.display = "none"
-  document.getElementById("seccionProductos").style.display = "none"
-  document.getElementById("contacto").style.display = "none"
-  document.getElementById("fondoLogos").style.display = "none"
-  document.getElementById("cardsInicio").style.display = "none"
-  ocument.getElementById("detalleProducto").style.display = "none"
-  document.getElementById("seccionCompras").style.display = "none"
-  document.getElementById("mapau").style.display = "none"
-  document.getElementsByClassName("headerSeccion")[0].style.display="none"
+  
 
   // $(window).scroll(function () {
   //   $('.animate-text').each(function () {

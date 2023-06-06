@@ -17,7 +17,7 @@ function imprimirDetalle(id) {
     var ingestaVisible = ingesta !== "" ? "" : "hidden";
     contenidoDetalle =
         `
-        <p class="titulo">${detalleProducto[0].categoria}</p>
+        <p class="titulo">Categoria de productos: ${detalleProducto[0].categoria}</p>
         <div class="detalleContent card">
         <div class="detalleIzquierda">
           <div class="imgDetalleContent">
@@ -57,6 +57,7 @@ function imprimirDetalle(id) {
     htmlDetalle.style.display = "flex"
     htmlDetalle.innerHTML = contenidoDetalle
     document.getElementById("seccionProductos").style.display="none"
+    document.getElementById("encabezadosSeccion").style.display="none"
     
     
     var botonCompra = document.getElementsByClassName("btnShop")

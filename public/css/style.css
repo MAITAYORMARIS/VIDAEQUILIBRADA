@@ -128,7 +128,7 @@ main {
 .headerSeccion{
     width: 100%;
     height: 150px;
-    display: none;
+    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;

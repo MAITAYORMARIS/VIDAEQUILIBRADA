@@ -60,9 +60,8 @@ document.getElementById("enlaceCompras").addEventListener("click", function(e){
 })
 document.getElementById("enlaceNosotros").addEventListener("click", function(e){
     nosotros()
-    document.getElementsByClassName("headerSeccion")[0].style.display="none"
-    document.getElementById("actividades").style.display="none"
-    document.getElementById("contacto").style.display="none"
+    // document.getElementById("actividades").style.display="none"
+    // document.getElementById("contacto").style.display="none"
 
 })
 
