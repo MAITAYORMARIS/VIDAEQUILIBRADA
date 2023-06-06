@@ -124,7 +124,7 @@
     width: 100%;
     padding: 16px 0;
     text-align: center;
-    display: flex;
+    /* display: flex; */
 }
 
 .carrito-items {
@@ -206,10 +206,37 @@
     position: absolute;
     bottom: 4px;
     right: 0;
-    height: 20px;
-    width: 15%;
-    background-color: blue;
+    height: 30px;
+    width: 20%;
+    background-color:#058290d7;
+    color:white;
+}
+.btncarrito:hover{
+    height: 35px;
+    width: 22%;
+    background-color:#ece7b8;
+    color:black;
 }
 .oculto {
     display: none !important;
+}
+
+@media screen and (min-width:320px) and (max-width:480px){
+    .contenedor-compras {
+        flex-direction: column;
+    }
+    #compras {
+        width: 100%;
+    }
+    .col-compras {
+        width: calc(100%/2);
+        height: 430px;
+    }
+    .card-compra {
+        margin: .5em .5em;
+    
+    }
+    #carrito {
+        width: 98%;
+    }
 }
