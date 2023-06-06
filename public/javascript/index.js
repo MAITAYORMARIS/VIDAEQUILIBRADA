@@ -256,10 +256,51 @@ function busquedaSearch(producto) {
 
   }
   else {
-    document.getElementById("seccionProductos").innerHTML = `<h1>No se encontraron resultados</h1>`
+    mensajeBusqueda()
+    // document.getElementById("seccionProductos").innerHTML = `<h1>No se encontraron resultados</h1>`
   }
 }
 
+function mensajeBusqueda(){
+    Swal
+    .fire({
+      html: `
+      <p>No se encontraron resultados para su busqueda</p>
+              
+    `,
+    title: "Busqueda",
+    icon: "info",
+    iconColor: "white",
+    confirmButtonText: "Cerrar",
+    width: "60%",
+    grow: "",
+    background: "#2ecc71",
+    backdrop: true,
+    toast: false,
+    allowOutsideClick: true,
+    allowEnterKey: false,
+    allowEscapeKey: false,
+    stopKeydownPropagation: true,
+    confirmButtonAriaLabel: "Cerrar",
+    confirmButtonColor: "white",
+    showCloseButton: true,
+    closeButtonAriaLabel: "Cerrar alerta",
+    customClass: {
+      title: "tituloAlert",
+      textconfirmButton: "custom-button",
+      confirmButton: "btnColor",
+      htmlContainer: "custom-container",
+    },
+  })
+  .then(resultado => {
+    limpiarInput();
+    } )
+  }
+
+  function limpiarInput(){
+    busquedaInput.value=""
+    imprimir(arrayBusqueda)
+  }
 /* CARTAS DE ACTIVIDADES */
 
 $(".option").click(function(){
