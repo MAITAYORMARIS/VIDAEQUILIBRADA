@@ -58,6 +58,13 @@ document.getElementById("enlaceContacto").addEventListener("click", function(e){
 document.getElementById("enlaceCompras").addEventListener("click", function(e){
     compras()
 })
+document.getElementById("enlaceNosotros").addEventListener("click", function(e){
+    nosotros()
+    document.getElementsByClassName("headerSeccion")[0].style.display="none"
+    document.getElementById("actividades").style.display="none"
+    document.getElementById("contacto").style.display="none"
+
+})
 
 var tarjetaOrganicos=document.getElementById("cardOrganicos")
 tarjetaOrganicos.addEventListener("click", function(e){
@@ -87,6 +94,8 @@ function navegacion(id) {
         case "alimentosOrganicos":
             imprimir(alimentosOrganicos)
             arrayBusqueda=alimentosOrganicos
+            document.getElementById("actividades").style.display = "none"
+            document.getElementById("sobreNosotros").style.display="none"
             document.getElementsByClassName("headerSeccion")[0].style.display="flex"
             document.getElementById("textoSeccion").style.display="flex"
             document.getElementById("tituloSec").innerHTML="ALIMENTOS ORGANICOS"
@@ -104,6 +113,8 @@ function navegacion(id) {
         case "productosSinLactosa":
             imprimir(productosSinLactosa)
             arrayBusqueda=productosSinLactosa
+            document.getElementById("actividades").style.display = "none"
+            document.getElementById("sobreNosotros").style.display="none"
             document.getElementsByClassName("headerSeccion")[0].style.display="flex"
             document.getElementById("textoSeccion").style.display="flex"
             document.getElementById("tituloSec").innerHTML="PRODUCTOS SIN LACTOSA"
@@ -121,6 +132,8 @@ function navegacion(id) {
         case "suplementosNaturales":
             imprimir(suplementosNaturales)
             arrayBusqueda=suplementosNaturales
+            document.getElementById("actividades").style.display = "none"
+            document.getElementById("sobreNosotros").style.display="none"
             document.getElementById("seccionProductos").style.display = "flex"
             document.getElementById("carouselExampleFade").style.display="none"
             document.getElementById("mapau").style.display="none"
@@ -138,6 +151,8 @@ function navegacion(id) {
         case "hogar":
             imprimir(hogar)
             arrayBusqueda=hogar
+            document.getElementById("actividades").style.display = "none"
+            document.getElementById("sobreNosotros").style.display="none"
             document.getElementById("tituloSec").innerHTML="HOGAR"
             document.getElementsByClassName("circulo")[0].innerHTML=`<div class="contenedorImgCategoria"><img src="./images/Hogar.jpg" alt="imagen categoria hogar"></div>`
             document.getElementById("textoSeccion").style.display="flex"
@@ -155,7 +170,9 @@ function navegacion(id) {
         case "contact":
             console.log("form de contactos")
             formulario() 
+            document.getElementById("actividades").style.display = "none"
             document.getElementById("carouselExampleFade").style.display="none"
+            document.getElementById("sobreNosotros").style.display="none"
             document.getElementById("mapau").style.display="none"
             document.getElementById("fondoLogos").style.display="none"
             document.getElementById("cardsInicio").style.display="none"
@@ -170,7 +187,7 @@ function navegacion(id) {
             break;
         default:
             document.getElementById("carouselExampleFade").style.display = "flex"
-            document.getElementById("mapau").style.display="flex"
+            document.getElementById("mapau").style.display="none"
             document.getElementById("seccionProductos").style.display = "none"
             document.getElementById("detalleProducto").style.display="none"
             document.getElementById("seccionCompras").style.display="none"
@@ -178,6 +195,8 @@ function navegacion(id) {
             document.getElementsByClassName("headerSeccion")[0].style.display="none"
             document.getElementById("fondoLogos").style.display="flex"
             document.getElementById("cardsInicio").style.display="flex"
+            document.getElementById("actividades").style.display = "flex"
+            document.getElementById("sobreNosotros").style.display="none"
     }
 }
 
@@ -241,3 +260,11 @@ function busquedaSearch(producto) {
     document.getElementById("seccionProductos").innerHTML = `<h1>No se encontraron resultados</h1>`
   }
 }
+
+/* CARTAS DE ACTIVIDADES */
+
+$(".option").click(function(){
+    $(".option").removeClass("active");
+    $(this).addClass("active");
+    
+ });

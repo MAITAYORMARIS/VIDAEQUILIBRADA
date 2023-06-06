@@ -11,11 +11,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css'>
   <link rel="stylesheet" href="./css/style.css" />
   <link rel="stylesheet" href="./css/productos.css">
   <link rel="stylesheet" href="./css/detalle.css">
   <link rel="stylesheet" href="./css/compras.css">
   <link rel="stylesheet" href="./css/contacto.css">
+  <link rel="stylesheet" href="./css/nosotros.css">
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <title>Vida Equilibrada</title>
 </head>
@@ -83,7 +85,7 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-   <!-- LOGOS INICIO  -->
+    <!-- LOGOS INICIO  -->
     <div id="fondoLogos">
       <img class="imgLogos" src="./images/imageE.png" alt="" width="50px" height="50px">
       <h6 class="espacioLogos"><strong class="chancho">Envíos a todo el país</strong><br>
@@ -96,45 +98,113 @@
         +549 11 4292-3000</h6>
     </div>
     <div id="cardsInicio">
-    <div class="card" style="width: 18rem;" id="cardOrganicos">
-      <img src="./images/alimentosorganicos.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h3 class="card-text">ALIMENTOS ORGANICOS</h3>
+      <div class="card" style="width: 18rem;" id="cardOrganicos">
+        <img src="./images/alimentosorganicos.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3 class="card-text">ALIMENTOS ORGANICOS</h3>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;" id="cardSinLactosa">
+        <img src="./images/sinLactosa.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3 class="card-text">PRODUCTOS SIN LACTOSA</h3>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;" id="cardSuplementos">
+        <img src="./images/suplementosNaturales.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3 class="card-text">SUPLEMENTOS NATURALES</h3>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;" id="cardHogar">
+        <img src="./images/Hogar.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3 class="card-text particularInicioHogar">HOGAR</h3>
+        </div>
       </div>
     </div>
-    <div class="card" style="width: 18rem;" id="cardSinLactosa">
-      <img src="./images/sinLactosa.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h3 class="card-text">PRODUCTOS SIN LACTOSA</h3>
+    <!-- CARTAS DE ACTIVIDADES -->
+    <div class="options" id="actividades">
+      <div class="option active"
+        style="--optionBackground:url(https://firebasestorage.googleapis.com/v0/b/vidaequilibrada-dc1b1.appspot.com/o/multimedia%2Factividades%2Fbosque.png?alt=media&token=feb9dfd4-326c-4ffe-97bb-bd9dca6e6f6b);">
+        <div class="shadow"></div>
+        <div class="label">
+          <div class="icon">
+            <i class="fas fa-walking"></i>
+          </div>
+          <div class="info">
+            <div class="main">Baño de Bosque</div>
+            <div class="sub">Guía: Yendar Avila</div>
+          </div>
+        </div>
+      </div>
+      <div class="option"
+        style="--optionBackground:url(https://firebasestorage.googleapis.com/v0/b/vidaequilibrada-dc1b1.appspot.com/o/multimedia%2Factividades%2Fnutricion.png?alt=media&token=59385c75-cffa-4e50-acb7-d055daa0f8aa);">
+        <div class="shadow"></div>
+        <div class="label">
+          <div class="icon">
+            <i class="fas fa-smile"></i>
+          </div>
+          <div class="info">
+            <div class="main">Charla Nutricional</div>
+            <div class="sub">Instructor: Luciano Rivas</div>
+          </div>
+        </div>
+      </div>
+      <div class="option"
+        style="--optionBackground:url(https://firebasestorage.googleapis.com/v0/b/vidaequilibrada-dc1b1.appspot.com/o/multimedia%2Factividades%2Freiki.png?alt=media&token=43910357-81a9-48e8-96a4-a1222156553e);">
+        <div class="shadow"></div>
+        <div class="label">
+          <div class="icon">
+            <i class="fas fa-user-check"></i>
+          </div>
+          <div class="info">
+            <div class="main">Terapia de Reiki</div>
+            <div class="sub">Instructora: Carolina Marquez</div>
+          </div>
+        </div>
+      </div>
+      <div class="option"
+        style="--optionBackground:url(https://firebasestorage.googleapis.com/v0/b/vidaequilibrada-dc1b1.appspot.com/o/multimedia%2Factividades%2Fyoga.png?alt=media&token=4dcad045-2531-460d-8029-580a7cf4a59a);">
+        <div class="shadow"></div>
+        <div class="label">
+          <div class="icon">
+            <i class="fas fa-pray"></i>
+          </div>
+          <div class="info">
+            <div class="main">Clase de Yoga</div>
+            <div class="sub">Instructora: Yormaris Maita</div>
+          </div>
+        </div>
+      </div>
+      <div class="option"
+        style="--optionBackground:url(https://firebasestorage.googleapis.com/v0/b/vidaequilibrada-dc1b1.appspot.com/o/multimedia%2Factividades%2Faromaterapia.jpeg?alt=media&token=d8a7f6ae-a2ec-4c4a-971b-5fb6b4fdade7);">
+        <div class="shadow"></div>
+        <div class="label">
+          <div class="icon">
+            <i class="fas fa-sun"></i>
+          </div>
+          <div class="info">
+            <div class="main">Aromaterapia</div>
+            <div class="sub">Organiza: Vida Equilibrada</div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="card" style="width: 18rem;" id="cardSuplementos">
-      <img src="./images/suplementosNaturales.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h3 class="card-text">SUPLEMENTOS NATURALES</h3>
-      </div>
-    </div>
-    <div class="card" style="width: 18rem;" id="cardHogar">
-      <img src="./images/Hogar.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h3 class="card-text particularInicioHogar">HOGAR</h3>
-      </div>
-    </div>
-  </div>
     <!-- TITULOS DE SECCION -->
-    <section class="headerSeccion">
+    <section class="headerSeccion" id="encabezadosSeccion">
       <div class="contenedorArticulo">
         <div class="circulo">
-          
+
         </div>
       </div>
       <div class="contenedorElemento"><img src="./images/istockphoto-rama.png"></div>
-      
+
       <div class="tituloSeccion">
         <p id="textoSeccion">Conoce nuestra oferta en</p>
         <p id="tituloSec"></p>
       </div>
-      
+
       <div id="elementoBusqueda">
         <input class="form-control me-2" type="search" placeholder="Busca tu articulo" aria-label="Search"
           id="busqueda">
@@ -159,6 +229,8 @@
     <section id="detalleProducto"> </section>
     <!-- SECCION CONTACTO -->
     <section id="contacto"></section>
+    <!-- SECCION NOSOTROS  -->
+    <section id="sobreNosotros"></section>
     <!-- SECCION DE COMPRAS -->
     <section class="compras" id="seccionCompras">
       <div class="contenedor-compras">
@@ -169,13 +241,13 @@
           <div class="carrito">
             <div class="carrito-header">
               <p>Tu Carrito</p>
-              
+
             </div>
             <div class="carrito-items" id="tuPedido"> </div>
             <div class="carrito-footer" id="final"></div>
             <button type="button" id="pedir" class=" btn btncarrito">Enviar Pedido</button>
           </div>
-          
+
         </div>
       </div>
     </section>
@@ -238,10 +310,12 @@
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
     </script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
   <script src="./javascript/index.js"></script>
   <script src="./javascript/compras.js"></script>
   <script src="./javascript/detalleProducto.js"></script>
   <script src="./javascript/contacto.js"></script>
+  <script src="./javascript/nosotros.js"></script>
 
 
 </body>

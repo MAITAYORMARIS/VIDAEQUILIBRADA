@@ -6,6 +6,8 @@ let cantidad = 0
 let totalItem = 0
 
 function compras() {
+  document.getElementById("actividades").style.display = "none"
+  document.getElementById("sobreNosotros").style.display="none"
   document.getElementById("fondoLogos").style.display = "none"
   document.getElementById("cardsInicio").style.display = "none"
   document.getElementById("seccionProductos").style.display = "none"

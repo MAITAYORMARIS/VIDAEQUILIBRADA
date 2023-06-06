@@ -1,0 +1,91 @@
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+#sobreNosotros{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.video-section,
+.location-section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.video-section video,
+.location-section img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: .3;
+
+}
+
+.animate-text {
+  color:black;
+  /* opacity: 0; */
+  transition: all 0.5s ease-out;
+  transform: translateY(20px);
+  will-change: opacity, transform;
+}
+.content {
+  position: relative;
+  z-index: 2;
+  color: rgb(0, 0, 0);
+  font-size: 1.3rem;
+  text-align: center;
+  margin-top: 8%;
+}
+
+.map-overlay iframe {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1441px) {
+
+  .content {
+      font-size: 1.5rem;
+      margin-top: 5%;
+      font-weight: 400 !important;
+
+  }
+
+}
+@media (max-width: 768px) {
+
+  .content {
+      font-size: 1rem;
+      margin-top: 5%;
+      font-weight: 400 !important;
+
+  }
+
+}
+@media (max-width: 426px) {
+
+.content {
+    font-size: .9rem;
+    margin-top: 3%;
+    font-weight: 400 !important;
+
+}
+
+}
+@media (max-width: 321px) {
+
+.content {
+    font-size: .8rem;
+    margin-top: 3%;
+    font-weight: 400 !important;
+
+}
+
+}
